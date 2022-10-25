@@ -510,26 +510,26 @@
       <div class="modal">
         <form class="modal-form">
           <p class="text-form">Залиште свої дані, ми вам передзвонимо</p>
+          <label class="modal-label-form" for="name">Ім'я</label>
           <div class="form-box">
-            <label class="modal-label-form" for="name">Ім'я</label>
+            <input class="modal-input-form" id="name" type="text" />
             <svg class="modal-form-svg" width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-person-black"></use>
             </svg>
-            <input class="modal-input-form" id="name" type="text" />
           </div>
+          <label class="modal-label-form" for="tel">Телефон</label>
           <div class="form-box">
-            <label class="modal-label-form" for="tel">Телефон</label>
+            <input class="modal-input-form" id="tel" type="tel" />
             <svg class="modal-form-svg" width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-phone-black"></use>
             </svg>
-            <input class="modal-input-form" id="tel" type="tel" />
           </div>
+          <label class="modal-label-form" for="mail">Пошта</label>
           <div class="form-box">
-            <label class="modal-label-form" for="mail">Пошта</label>
+            <input class="modal-input-form" id="mail" type="email" />
             <svg class="modal-form-svg" width="18" height="18">
               <use href="./images/symbol-defs.svg#icon-email-black"></use>
             </svg>
-            <input class="modal-input-form" id="mail" type="email" />
           </div>
           <div class="form-box">
             <label class="modal-label-form" for="comment">Коментар</label>
@@ -541,7 +541,12 @@
             ></textarea>
           </div>
           <div class="form-checkbox">
-            <input type="checkbox" name="accep" id="acceptance" />
+            <input
+              class="input-checkbox visually-hidden"
+              type="checkbox"
+              name="accep"
+              id="acceptance"
+            />
             <label class="form-accep" for="accep"
               >Погоджуюся з розсилкою та приймаю
               <a class="form-link" href="#"> Умови договору</a></label
