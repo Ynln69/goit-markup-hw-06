@@ -726,7 +726,8 @@ img {
   fill: var(--accent-color);
 }
 
-/* FORM STYLE */
+/* MODAL FORM STYLE */
+/* CONTACT INFO */
 .text-form {
   margin-bottom: 12px;
 
@@ -774,6 +775,7 @@ img {
 .modal-input-form:focus + .modal-form-svg {
   fill: var(--accent-color);
 }
+/* TEXTAREA */
 .textarea-form {
   width: 448px;
   height: 120px;
@@ -794,13 +796,33 @@ img {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 }
+/* CHECKBOX */
 
-.form-checkbox {
+.input-checkbox {
+  appearance: none;
+}
+
+.form-accep {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 7px;
   margin-bottom: 30px;
+}
+.form-vector {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondory-font-color);
+  border-radius: 2px;
+}
+
+.input-checkbox:checked + .form-vector {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-position: center;
+  background-origin: border-box;
 }
 
 .form-accep {
@@ -838,6 +860,7 @@ img {
 
   transition: background-color 250ms var(--time-function);
 }
-.form-button:hover {
+.form-button:hover,
+.form-button:focus {
   background-color: var(--secondary-accent-color);
 }
