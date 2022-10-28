@@ -400,96 +400,6 @@ img {
 .customers-icon {
   fill: currentColor;
 }
-/* Стилізація підвалу сторінок */
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  background-color: var(--boder-bg-color);
-}
-
-.footer .logo {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-.logo-light {
-  color: var(--main-light-color);
-}
-.address {
-  font-style: normal;
-}
-
-.address-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.address-link {
-  color: var(--main-light-color);
-  letter-spacing: 0.03em;
-  margin-bottom: 9px;
-  line-height: 1.71;
-
-  transition: color 250ms var(--time-function);
-}
-.address-link:hover,
-.address-link:focus {
-  color: var(--accent-color);
-}
-
-.address-contact {
-  color: var(--address-text-color);
-  letter-spacing: 0.03em;
-  line-height: 1.71;
-  transition: color 250ms var(--time-function);
-}
-.address-contact:hover,
-.address-contact:focus {
-  color: var(--accent-color);
-}
-
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  gap: 70px;
-}
-
-.join-title {
-  margin-bottom: 20px;
-  color: var(--main-light-color);
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.join-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.join-link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-
-  color: var(--main-light-color);
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms var(--time-function);
-}
-
-.join-link:hover,
-.join-link:focus {
-  background-color: var(--accent-color);
-}
-.join-svg {
-  fill: currentColor;
-}
 /* Стилізація для сторінки портфоліо  */
 /* Основний контент\фільтр секція */
 
@@ -526,6 +436,7 @@ img {
   background-color: var(--accent-color);
 }
 
+/* СТИЛІЗАЦІЯ ФІЛЬТРІВ */
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -607,6 +518,96 @@ img {
   letter-spacing: 0.03em;
 }
 
+/* Стилізація підвалу сторінок */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--boder-bg-color);
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.logo-light {
+  color: var(--main-light-color);
+}
+.address {
+  font-style: normal;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address-link {
+  color: var(--main-light-color);
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
+  line-height: 1.71;
+
+  transition: color 250ms var(--time-function);
+}
+.address-link:hover,
+.address-link:focus {
+  color: var(--accent-color);
+}
+
+.address-contact {
+  color: var(--address-text-color);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+  transition: color 250ms var(--time-function);
+}
+.address-contact:hover,
+.address-contact:focus {
+  color: var(--accent-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 94px;
+}
+
+.join-title {
+  margin-bottom: 20px;
+  color: var(--main-light-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.join-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.join-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  color: var(--main-light-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--time-function);
+}
+
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--accent-color);
+}
+.join-svg {
+  fill: currentColor;
+}
 /* FORM STYLE FOOTER*/
 
 .form-text {
@@ -619,7 +620,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.input-box {
+  display: flex;
+}
 .input-form {
+  display: block;
   width: 358px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -722,7 +727,8 @@ img {
   transform: translate(-50%, -50%);
   transition: fill 250ms var(--time-function);
 }
-.close:hover {
+.close:hover,
+.close:focus {
   fill: var(--accent-color);
 }
 
@@ -745,6 +751,7 @@ img {
 }
 
 .modal-label-form {
+  display: inline-block;
   margin-bottom: 4px;
 
   font-weight: 400;
@@ -759,10 +766,11 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border 250ms var(--time-function) fill 250ms var(--time-function);
+  transition: border-color 250ms var(--time-function) fill 250ms
+    var(--time-function);
 }
 .modal-input-form:focus {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   outline: none;
 }
 
@@ -776,17 +784,22 @@ img {
   fill: var(--accent-color);
 }
 /* TEXTAREA */
+.textarea-box {
+  margin-bottom: 20px;
+}
 .textarea-form {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms var(--time-function);
   resize: none;
 }
 
 .textarea-form:focus {
+  border-color: var(--accent-color);
   outline: none;
 }
 .textarea-form::placeholder {
@@ -839,7 +852,7 @@ img {
   letter-spacing: 0.03em;
   text-decoration: underline;
 }
-
+/* BUTTON */
 .form-button {
   display: flex;
   margin-right: auto;
